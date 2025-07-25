@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Anna Mae Serdeña</title>
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #c0c0c0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      background-color: var(--white);
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-right a {
+      margin-left: 1rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-right a:hover {
+      color: var(--gray);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .project-text {
+      flex: 1 1 500px;
+    }
+
+    .project-image {
+      flex: 1 1 280px;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .project-text h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--black);
+    }
+
+    .project-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-text a {
+      display: inline-block;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .project-text a:hover {
+      background-color: var(--white);
+      color: var(--black);
+      border: 1px solid var(--black);
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column;
+      }
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img id="logo" src="/images/amslogo.png" alt="Logo" />
+    </div>
+    <div class="nav-right">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+        <a href="competitions.html">Competitions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Projects</h1>
+
+    <!-- SunLoom RiceDry+ -->
+    <div class="project">
+      <div class="project-text">
+        <h2>SunLoom RiceDry+</h2>
+        <p>
+          A solar-powered, IoT-integrated rice dryer with real-time sensors and AI-based moisture prediction. 
+          Designed to automate and optimize rice drying using both solar and AC power, with a digital interface 
+          for environmental monitoring and control.
+        </p>
+      </div>
+      <div class="project-image">
+        <img src="images/sunloom.png" alt="SunLoom RiceDry+ Image" />
+      </div>
+    </div>
+
+    <!-- Anomaly Detection -->
+    <div class="project">
+      <div class="project-text">
+        <h2>Isolation Forest and PCA-Based Anomaly Detection</h2>
+        <p>
+          Developed an algorithm using Isolation Forest and Principal Component Analysis to detect and remove 
+          anomalies in rainfall and water level datasets, improving data reliability for hydrological systems.
+        </p>
+      </div>
+      <div class="project-image">
+        <img src="images/anomaly.png" alt="Hydrological Anomaly Detection Image" />
+      </div>
+    </div>
+
+    <!-- Student Performance -->
+    <div class="project">
+      <div class="project-text">
+        <h2>Student Performance Data Analysis</h2>
+        <p>
+          Analyzed academic and background data from two Portuguese public schools to identify factors influencing 
+          student grades. Tasks included filtering and cleaning data, handling missing values, and converting 
+          text to numerical formats to support actionable insights for education improvement.
+        </p>
+        <a href="https://docs.google.com/spreadsheets/d/1dm_8ThGs1DknVfwYzoTDUcwyF81ac6aru1d-2hS36i0/edit?gid=1019073941" target="_blank">View in Google Sheets</a>
+      </div>
+      <div class="project-image">
+        <img src="images/student.png" alt="Student Performance Image" />
+      </div>
+    </div>
+
+    <!-- Data Analyst Jobs -->
+    <div class="project">
+      <div class="project-text">
+        <h2>Data Analyst Jobs (2023) Analysis</h2>
+        <p>
+          Summarized and visualized job application data to optimize the online recruitment process. 
+          Analyzed total and average monthly applications and identified peak and low application periods 
+          to inform decision-making in agency operations.
+        </p>
+        <a href="https://docs.google.com/spreadsheets/d/1i02z4eCdEmYGCpfWKoXVOTiRAFo7Jq0TmuwOzoftA74/edit?gid=1589814443" target="_blank">View in Google Sheets</a>
+      </div>
+      <div class="project-image">
+        <img src="images/dataanalyst.png" alt="Data Analyst Job Applications Image" />
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Anna Mae Serdeña. All rights reserved.
+  </footer>
+</body>
+</html>

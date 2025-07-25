@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Anna Mae Serdeña</title>
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #c0c0c0;
+      --lightgray: #c0c0c0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      background-color: var(--white);
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-right a {
+      margin-left: 1rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-right a:hover {
+      color: var(--gray);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .skill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-item {
+      flex: 1 1 200px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: var(--gray);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+    }
+
+    .skill-item img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .soft-skills-box {
+      background-color: var(--lightgray);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    .soft-skill {
+      margin-bottom: 1rem;
+    }
+
+    .soft-skill label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    .bar {
+      background-color: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background-color: var(--black);
+      border-radius: 10px 0 0 10px;
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .skill-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img id="logo" src="/images/amslogo.png" alt="Logo" />
+    </div>
+    <div class="nav-right">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="competitions.html">Competitions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Skills</h1>
+
+    <h2>Programming Languages</h2>
+    <div class="skill-grid">
+      <div class="skill-item"><img src="images/html.png" alt="HTML"> HTML</div>
+      <div class="skill-item"><img src="images/ccs.png" alt="CSS"> CSS</div>
+      <div class="skill-item"><img src="images/js.png" alt="JavaScript"> JavaScript</div>
+      <div class="skill-item"><img src="images/sql.png" alt="SQL"> SQL</div>
+    </div>
+
+    <h2>Development Tools</h2>
+    <div class="skill-grid">
+      <div class="skill-item"><img src="images/vs.png" alt="VS Code"> Visual Studio Code</div>
+      <div class="skill-item"><img src="images/github.png" alt="GitHub"> GitHub</div>
+    </div>
+
+    <h2>Productivity & Data Tools</h2>
+    <div class="skill-grid">
+      <div class="skill-item"><img src="images/excel.png" alt="Excel"> Microsoft Excel</div>
+      <div class="skill-item"><img src="images/sheets.png" alt="Google Sheets"> Google Sheets</div>
+      <div class="skill-item"><img src="images/bigquery.png" alt="BigQuery"> BigQuery</div>
+    </div>
+
+    <h2>Soft Skills</h2>
+    <div class="soft-skills-box">
+      <div class="soft-skill"><label>Analytical Thinking</label><div class="bar"><div class="bar-fill" style="width: 85%"></div></div></div>
+      <div class="soft-skill"><label>Project Planning & Scheduling</label><div class="bar"><div class="bar-fill" style="width: 90%"></div></div></div>
+      <div class="soft-skill"><label>Team Leadership & Coordination</label><div class="bar"><div class="bar-fill" style="width: 80%"></div></div></div>
+      <div class="soft-skill"><label>Stakeholder Communication</label><div class="bar"><div class="bar-fill" style="width: 84%"></div></div></div>
+      <div class="soft-skill"><label>Time Management</label><div class="bar"><div class="bar-fill" style="width: 82%"></div></div></div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Anna Mae Serdeña. All rights reserved.
+  </footer>
+</body>
+</html>

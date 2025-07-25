@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competitions | Anna Mae Serdeña</title>
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #c0c0c0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      background-color: var(--white);
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left img {
+      height: 40px;
+    }
+
+    .nav-right a {
+      margin-left: 1rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-right a:hover {
+      color: var(--gray);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .competition {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .comp-logo {
+      flex: 1 1 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .comp-logo img {
+      width: 90px;
+      height: auto;
+    }
+
+    .comp-text {
+      flex: 1 1 400px;
+    }
+
+    .comp-text h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .comp-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .comp-text a {
+      display: inline-block;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .comp-text a:hover {
+      background-color: var(--white);
+      color: var(--black);
+      border: 1px solid var(--black);
+    }
+
+    .comp-images {
+      flex: 1 1 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .comp-images img {
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .competition {
+        flex-direction: column;
+      }
+
+      .comp-logo {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .comp-logo img {
+        width: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="/images/amslogo.png" alt="Logo" />
+    </div>
+    <div class="nav-right">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="competitions.html">Competitions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Competitions</h1>
+
+    <!-- Competition Blocks Start -->
+    <!-- Region 6 packetHACKS -->
+    <div class="competition">
+      <div class="comp-logo">
+        <img src="images/packetworx.png" alt="Packetworx">
+        <img src="images/dict.png" alt="DICT">
+      </div>
+      <div class="comp-text">
+        <h2>Region 6 packetHACKS – 1st Place</h2>
+        <p>Bacolod City</p>
+        <p>Led IoT-based prototype; outperformed 27 teams.</p>
+        <a href="https://packetworx.com/" target="_blank">Packetworx Website</a>
+        <a href="https://dict.gov.ph/" target="_blank">DICT Website</a>
+      </div>
+      <div class="comp-images">
+        <img src="images/bacolod.png" alt="Certificate">
+        <img src="images/bacolod(1).png" alt="Event Photo">
+      </div>
+    </div>
+
+    <!-- National packetHACKS -->
+    <div class="competition">
+      <div class="comp-logo">
+        <img src="images/packetworx.png" alt="Packetworx">
+        <img src="images/dict.png" alt="DICT">
+      </div>
+      <div class="comp-text">
+        <h2>National packetHACKS – 3rd Place</h2>
+        <p>Pasig City</p>
+        <p>Top 3 of 14 national finalists.</p>
+        <a href="https://packetworx.com/" target="_blank">Packetworx Website</a>
+        <a href="https://dict.gov.ph/" target="_blank">DICT Website</a>
+      </div>
+      <div class="comp-images">
+        <img src="images/pasig.png" alt="Certificate">
+        <img src="images/pasig(1).png" alt="Event Photo">
+      </div>
+    </div>
+
+    <!-- Western Visayas AI Hackathon -->
+    <div class="competition">
+      <div class="comp-logo">
+        <img src="images/dost.png" alt="DOST">
+      </div>
+      <div class="comp-text">
+        <h2>Western Visayas AI Hackathon – 3rd Place</h2>
+        <p>Antique</p>
+        <p>Created AI-based solution with no prior AI experience.</p>
+        <a href="https://www.dost.gov.ph/" target="_blank">DOST Website</a>
+      </div>
+      <div class="comp-images">
+        <img src="images/ant.png" alt="Certificate">
+        <img src="images/ant(1).png" alt="Event Photo">
+      </div>
+    </div>
+
+    <!-- Region 6 Moonshot TNK -->
+    <div class="competition">
+      <div class="comp-logo">
+        <img src="images/dti.png" alt="DTI">
+      </div>
+      <div class="comp-text">
+        <h2>Region 6 Moonshot TNK – Top 10</h2>
+        <p>Iloilo City</p>
+        <p>Chosen from 47 regional startups.</p>
+        <a href="https://www.dti.gov.ph/" target="_blank">DTI Website</a>
+      </div>
+      <div class="comp-images">
+        <img src="images/ilo.png" alt="Certificate">
+        <img src="images/ilo(1).png" alt="Event Photo">
+      </div>
+    </div>
+
+    <!-- Region 6 Philippine Start-up Challenge 9 -->
+    <div class="competition">
+      <div class="comp-logo">
+        <img src="images/dict.png" alt="DICT">
+      </div>
+      <div class="comp-text">
+        <h2>Region 6 Philippine Start-up Challenge 9 – Top 10</h2>
+        <p>Iloilo City</p>
+        <a href="https://dict.gov.ph/" target="_blank">DICT Website</a>
+      </div>
+      <div class="comp-images">
+        <img src="images/iloilo.png" alt="Certificate">
+        <img src="images/iloilo(1).png" alt="Event Photo">
+      </div>
+    </div>
+
+    <!-- Socially Relevant Technologies -->
+    <div class="competition">
+      <div class="comp-logo">
+        <img src="images/ipophl.png" alt="DICT">
+      </div>
+      <div class="comp-text">
+        <h2>Socially Relevant Technologies – Top 12</h2>
+        <p>Taguig City</p>
+        <p>Two entries addressing agri-tech issues.</p>
+        <a href="https://ipophil.gov.ph/" target="_blank">IPOPHL Website</a>
+      </div>
+      <div class="comp-images">
+        <img src="images/taguig.png" alt="Certificate">
+        <img src="images/taguig(1).png" alt="Event Photo">
+      </div>
+    <!-- University of Antique Product and Innovation -->
+    <div class="competition">
+      <div class="comp-logo">
+        <img src="images/ua.png" alt="UA">
+      </div>
+      <div class="comp-text">
+        <h2>University of Antique Product and Innovation – 1st Place</h2>
+        <p>Antique</p>
+        <p>Bested 8 departments..</p>
+        <a href="https://www.antiquespride.edu.ph/" target="_blank">UA Website</a>
+      </div>
+      <div class="comp-images">
+        <img src="images/antique.png" alt="Certificate">
+        <img src="images/antique(1).png" alt="Event Photo">
+      </div>
+    </div>
+     </main>
+
+  <footer>
+    &copy; 2025 Anna Mae Serdeña. All rights reserved.
+  </footer>
+</body>
+</html>

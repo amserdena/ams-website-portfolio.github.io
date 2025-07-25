@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Anna Mae Serdeña</title>
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #c0c0c0;
+      --lightgray: #e0e0e0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .nav-left img {
+      height: 40px;
+    }
+
+    .nav-right a {
+      color: var(--white);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-right a:hover {
+      color: var(--gray);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      max-width: 1000px;
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    .photo-wrapper {
+      position: relative;
+      width: 280px;
+      flex-shrink: 0;
+      padding-top: 40px;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid var(--lightgray);
+      display: block;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--black); /* changed from var(--gray) to var(--black) */
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Stickers */
+    .sticker {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      animation: popRotate 6s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .sticker img {
+      width: 100%;
+      height: auto;
+    }
+
+    .sticker1 {
+      top: 40px;
+      left: -30px;
+      animation-delay: 0s;
+    }
+
+    .sticker2 {
+      bottom: -30px;
+      right: -30px;
+      animation-delay: 1s;
+    }
+
+    .sticker3 {
+      top: 50%;
+      left: -45px;
+      transform: translateY(-50%);
+      animation-delay: 2s;
+    }
+
+    @keyframes popRotate {
+      0%, 100% {
+        transform: scale(1) rotate(0deg);
+      }
+      25% {
+        transform: scale(1.2) rotate(10deg);
+      }
+      50% {
+        transform: scale(1) rotate(0deg);
+      }
+      75% {
+        transform: scale(1.2) rotate(-10deg);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-text {
+        max-width: 100%;
+      }
+
+      .photo-wrapper {
+        width: 220px;
+      }
+
+      .sticker {
+        width: 45px;
+        height: 45px;
+      }
+
+      .sticker1 {
+        top: 30px;
+        left: -25px;
+      }
+
+      .sticker2 {
+        bottom: -25px;
+        right: -25px;
+      }
+
+      .sticker3 {
+        left: -35px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+     <div class="nav-left">
+      <img id="logo" src="/images/amslogo.png" alt="Logo">
+    </div>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-right" id="navLinks">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="competitions.html">Competitions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="photo-wrapper">
+        <!-- Stickers -->
+        <div class="sticker sticker1">
+          <img src="images/sticker.png" alt="Sticker 1">
+        </div>
+        <div class="sticker sticker2">
+          <img src="images/sticker.png" alt="Sticker 2">
+        </div>
+        <div class="sticker sticker3">
+          <img src="images/sticker.png" alt="Sticker 3">
+        </div>
+
+        <div class="profile-photo">
+          <img src="images/ams(2).png" alt="Anna Mae Serdeña Portrait" />
+        </div>
+      </div>
+
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p>
+          Computer Engineering graduate and Civil Service Professional with strong analytical and problem-solving skills.
+          Served as Project Manager for a start-up team focused on technology-driven solutions, demonstrating leadership
+          in planning, coordination, and execution. Proficient in spreadsheet-based data analysis and currently pursuing
+          the Google Data Analytics Certification to build further expertise in SQL, BigQuery, Tableau, and R.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Anna Mae Serdeña. All rights reserved.
+  </footer>
+</body>
+</html>
