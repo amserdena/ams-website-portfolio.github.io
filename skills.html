@@ -207,12 +207,12 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img id="logo" src="/index.html/images/amslogo.png" alt="Logo" />
+      <img id="logo" src="images/amslogo.png" alt="Logo" />
     </div>
     <div class="hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </div>
-    <div class="nav-right">
+    <div class="nav-right" id="navLinks">
       <a href="home.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="skills.html">Skills</a>
@@ -225,18 +225,21 @@
 
   <main>
     <h1>Skills</h1>
+    <div class="skills-wrapper">
+      <div class="technical-skills">
+        <h2>Technical Skills</h2>
 
-    <h2>Programming Languages</h2>
-    <div class="skill-grid">
-      <div class="skill-item"><img src="images/html.png" alt="HTML"> HTML</div>
-      <div class="skill-item"><img src="images/ccs.png" alt="CSS"> CSS</div>
-      <div class="skill-item"><img src="images/js.png" alt="JavaScript"> JavaScript</div>
-      <div class="skill-item"><img src="images/sql.png" alt="SQL"> SQL</div>
-    </div>
+        <h3>Programming Languages</h3>
+        <div class="skill-grid">
+          <div class="skill-item"><img src="images/html.png" alt="HTML"> HTML</div>
+          <div class="skill-item"><img src="images/ccs.png" alt="CSS"> CSS</div>
+          <div class="skill-item"><img src="images/js.png" alt="JavaScript"> JavaScript</div>
+          <div class="skill-item"><img src="images/sql.png" alt="SQL"> SQL</div>
+        </div>
 
-    <h2>Development Tools</h2>
-    <div class="skill-grid">
-      <div class="skill-item"><img src="images/vs.png" alt="VS Code"> Visual Studio Code</div>
+        <h3>Development Tools</h3>
+        <div class="skill-grid">
+          <div class="skill-item"><img src="images/vs.png" alt="VS Code"> Visual Studio Code</div>
           <div class="skill-item"><img src="images/github.png" alt="GitHub"> GitHub</div>
           <div class="skill-item"><img src="images/sites.png" alt="Google Sites"> Google Sites</div>
         </div>
@@ -252,15 +255,18 @@
           <div class="skill-item"><img src="images/slides.png" alt="Google Slides"> Google Slides</div>
           <div class="skill-item"><img src="images/forms.png" alt="Google Forms"> Google Forms</div>
           <div class="skill-item"><img src="images/bigquery.png" alt="BigQuery"> BigQuery</div>
-    </div>
+        </div>
+      </div>
 
-    <h2>Soft Skills</h2>
-    <div class="soft-skills-box">
-      <div class="soft-skill"><label>Analytical Thinking</label><div class="bar"><div class="bar-fill" style="width: 85%"></div></div></div>
-      <div class="soft-skill"><label>Project Planning & Scheduling</label><div class="bar"><div class="bar-fill" style="width: 90%"></div></div></div>
-      <div class="soft-skill"><label>Team Leadership & Coordination</label><div class="bar"><div class="bar-fill" style="width: 80%"></div></div></div>
-      <div class="soft-skill"><label>Stakeholder Communication</label><div class="bar"><div class="bar-fill" style="width: 84%"></div></div></div>
-      <div class="soft-skill"><label>Time Management</label><div class="bar"><div class="bar-fill" style="width: 82%"></div></div></div>
+      <div class="technical-skills">
+        <h2>Soft Skills</h2>
+        <div class="soft-skills">
+        <div class="soft-skill"><label>Analytical Thinking</label><div class="bar"><div class="bar-fill" style="width: 85%"></div></div></div>
+        <div class="soft-skill"><label>Project Planning & Scheduling</label><div class="bar"><div class="bar-fill" style="width: 90%"></div></div></div>
+        <div class="soft-skill"><label>Team Leadership & Coordination</label><div class="bar"><div class="bar-fill" style="width: 80%"></div></div></div>
+        <div class="soft-skill"><label>Stakeholder Communication</label><div class="bar"><div class="bar-fill" style="width: 84%"></div></div></div>
+        <div class="soft-skill"><label>Time Management</label><div class="bar"><div class="bar-fill" style="width: 82%"></div></div></div>
+      </div>
     </div>
   </main>
 <script>
@@ -268,6 +274,7 @@
     document.getElementById("navLinks").classList.toggle("active");
   }
 </script>
+
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
   </footer>
