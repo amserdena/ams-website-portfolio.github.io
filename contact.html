@@ -26,9 +26,9 @@
       flex-direction: column;
     }
 
-    nav {
+       nav {
       background-color: var(--black);
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -39,6 +39,11 @@
 
     .nav-left img {
       height: 40px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
     }
 
     .nav-right a {
@@ -53,12 +58,52 @@
       color: var(--gray);
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--white);
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display: none;
+        flex-direction: column;
+        background: var(--black);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-right.active {
+        display: flex;
+      }
+
+      .nav-right a {
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray);
+        width: 100%;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     main {
       flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 1rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .contact-section {
@@ -156,7 +201,10 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img src="images/amslogo.png" alt="Logo" />
+      <img id="logo" src="/index.html/images/amslogo.png" alt="Logo" />
+    </div>
+     <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
     </div>
     <div class="nav-right">
       <a href="home.html">Home</a>
@@ -183,7 +231,11 @@
       </form>
     </div>
   </main>
-
+<script>
+    function toggleNav() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
   </footer>
