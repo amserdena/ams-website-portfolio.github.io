@@ -18,12 +18,12 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
-    html, body {
+    body {
       background-color: var(--white);
       color: var(--black);
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
     nav {
@@ -39,15 +39,14 @@
 
     .nav-left img {
       height: 40px;
-      width: auto;
     }
 
     .nav-right a {
       margin: 0 1rem;
       color: var(--white);
+      text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
-      text-decoration: none;
       transition: color 0.3s ease;
     }
 
@@ -69,48 +68,20 @@
       border-radius: 2px;
     }
 
-    @media (max-width: 768px) {
-      .nav-right {
-        display: none;
-        flex-direction: column;
-        background: var(--black);
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-      }
+    .nav-right.active {
+      display: flex;
+      flex-direction: column;
+      background: var(--black);
+      position: absolute;
+      top: 65px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
 
-      .nav-right a {
-        padding: 1rem;
-        border-bottom: 1px solid var(--gray);
-      }
-
-      .nav-right.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .intro {
-        padding: 1rem;
-        font-size: 0.95rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      #typing-container {
-        font-size: 1.2rem;
-      }
-
-      .btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-      }
+    .nav-right.active a {
+      padding: 1rem;
+      border-bottom: 1px solid var(--gray);
     }
 
     main {
@@ -125,6 +96,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      padding-left: 5%;
     }
 
     header img {
@@ -133,27 +105,25 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       z-index: 0;
     }
 
     .intro {
       position: relative;
       z-index: 1;
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 90%;
-      margin-left: 5%;
+      padding: 1.5rem;
+      max-width: 500px;
+      text-align: left;
+      color: var(--black);
     }
 
     #typing-container {
       font-size: 1.5rem;
       font-weight: bold;
-      white-space: nowrap;
-      overflow: hidden;
+      margin-bottom: 0.5rem;
       display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
+      color: var(--black);
     }
 
     #static-text {
@@ -172,10 +142,11 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.6rem;
       font-weight: bold;
+      margin-bottom: 0.4rem;
+      text-align: left;
       color: var(--black);
-      margin-bottom: 1rem;
     }
 
     .btn {
@@ -184,7 +155,7 @@
       color: var(--white);
       border: none;
       padding: 0.6rem 1.2rem;
-      margin: 0.5rem 0.5rem 0 0;
+      margin: 0.4rem 1rem 0.4rem 0;
       border-radius: 25px;
       text-decoration: none;
       transition: background-color 0.3s ease, color 0.3s ease;
@@ -193,13 +164,7 @@
     .btn:hover {
       background-color: var(--white);
       color: var(--black);
-    }
-
-    .intro p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 0.8rem;
-      color: var(--black);
+      border: 1px solid var(--black);
     }
 
     footer {
@@ -208,6 +173,65 @@
       text-align: center;
       padding: 1rem 2rem;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      header {
+        padding-left: 2rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      #typing-container {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        height: 100vh;
+      }
+
+      .intro {
+        max-width: 90%;
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 8vw;
+        margin-bottom: 0.3rem;
+      }
+
+      #typing-container {
+        font-size: 5vw;
+        flex-wrap: wrap;
+        margin-bottom: 0.4rem;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin: 0.4rem auto;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -228,7 +252,6 @@
       <a href="competitions.html">Competitions</a>
       <a href="contact.html">Contact</a>
     </div>
-    
   </nav>
 
   <main>
@@ -239,16 +262,13 @@
           <span id="static-text">Hi, I'm</span>
           <span id="animated-role"></span>
         </div>
-        <h1>ANNA MAE</h1>
-
+        <h1>ANNA MAE V.</h1>
+        <h1>SERDEÑA</h1>
         <a href="ANNAMAE_SERDEÑA_RESUME.pdf" download class="btn">Download Resume</a>
         <a href="mailto:annamaeserdena16@gmail.com" class="btn">Contact</a>
       </div>
-      
     </header>
-    
   </main>
-  
 
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
@@ -259,7 +279,7 @@
       document.getElementById('navLinks').classList.toggle('active');
     }
 
-    const roles = ["Data Analyst", "Project Manager"];
+    const roles = ["Data Analyst", "Web Developer", "Project Manager"];
     const roleElement = document.getElementById("animated-role");
     let roleIndex = 0;
     let charIndex = 0;
