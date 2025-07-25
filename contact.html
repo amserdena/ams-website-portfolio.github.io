@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anna Mae Serdeña | Data Analyst & Project Manager</title>
+  <title>Contact | Anna Mae Serdeña</title>
   <style>
     :root {
       --black: #000000;
@@ -26,7 +26,7 @@
       flex-direction: column;
     }
 
-    nav {
+       nav {
       background-color: var(--black);
       padding: 0.5rem 2rem;
       display: flex;
@@ -39,15 +39,18 @@
 
     .nav-left img {
       height: 40px;
-      width: auto;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
     }
 
     .nav-right a {
-      margin: 0 1rem;
+      margin-left: 1rem;
       color: var(--white);
-      font-weight: 500;
-      font-size: 1rem;
       text-decoration: none;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
@@ -81,125 +84,94 @@
         text-align: center;
       }
 
+      .nav-right.active {
+        display: flex;
+      }
+
       .nav-right a {
         padding: 1rem;
         border-bottom: 1px solid var(--gray);
-      }
-
-      .nav-right.active {
-        display: flex;
+        width: 100%;
       }
 
       .hamburger {
         display: flex;
       }
-
-      .intro {
-        padding: 1rem;
-        font-size: 0.95rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      #typing-container {
-        font-size: 1.2rem;
-      }
-
-      .btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-      }
     }
 
     main {
       flex: 1;
-    }
-
-    header {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    header img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .intro {
-      position: relative;
-      z-index: 1;
       padding: 2rem;
-      border-radius: 12px;
-      max-width: 90%;
-      margin-left: 5%;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    #typing-container {
-      font-size: 1.5rem;
-      font-weight: bold;
-      white-space: nowrap;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    #static-text {
-      margin-right: 8px;
-    }
-
-    #animated-role {
-      border-right: 2px solid var(--black);
-      animation: blink 0.7s steps(1) infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: var(--black);
-      margin-bottom: 1rem;
-    }
-
-    .btn {
-      display: inline-block;
+    .contact-section {
       background-color: var(--black);
       color: var(--white);
-      border: none;
-      padding: 0.6rem 1.2rem;
-      margin: 0.5rem 0.5rem 0 0;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .btn:hover {
+    .logo-top {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .logo-top img {
+      height: 140px;
+      max-width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-section h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid var(--gray);
+      border-radius: 6px;
       background-color: var(--white);
       color: var(--black);
     }
 
-    .intro p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 0.8rem;
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: var(--white);
       color: var(--black);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--black);
+      color: var(--white);
+      border: 1px solid var(--white);
     }
 
     footer {
@@ -208,86 +180,64 @@
       text-align: center;
       padding: 1rem 2rem;
       font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .logo-top img {
+        height: 100px;
+      }
+
+      .contact-section h1 {
+        font-size: 1.5rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
     <div class="nav-left">
-      <img id="logo" src="images/amslogo.png" alt="Logo">
+      <img id="logo" src="images/amslogo.png" alt="Logo" />
     </div>
-    <div class="hamburger" onclick="toggleNav()">
+     <div class="hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </div>
-    <div class="nav-right" id="navLinks">
+    <div class="nav-right"  id="navLinks">
       <a href="home.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html">Projects</a>
       <a href="certifications.html">Certifications</a>
-      <a href="competitions.html">Competitions</a>
+      <a href=competitions.html">Competitions</a>
       <a href="contact.html">Contact</a>
     </div>
-    
   </nav>
 
   <main>
-    <header>
-      <img src="images/amsss.png" alt="Banner Image" />
-      <div class="intro">
-        <div id="typing-container">
-          <span id="static-text">Hi, I'm</span>
-          <span id="animated-role"></span>
-        </div>
-        <h1>ANNA MAE</h1>
-
-        <a href="ANNAMAE_SERDEÑA_RESUME.pdf" download class="btn">Download Resume</a>
-        <a href="mailto:annamaeserdena16@gmail.com" class="btn">Contact</a>
+    <div class="contact-section">
+      <div class="logo-top">
+        <img src="images/amslogo.png" alt="Top Logo" />
       </div>
-      
-    </header>
-    
+      <h1>Contact Me</h1>
+      <form action="mailto:annamaeserdena16@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required />
+        <input type="email" name="Email" placeholder="Your Email" required />
+        <textarea name="Message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </main>
-  
-
+<script>
+    function toggleNav() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
   </footer>
-
-  <script>
-    function toggleNav() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-
-    const roles = ["Data Analyst", "Project Manager"];
-    const roleElement = document.getElementById("animated-role");
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeRole() {
-      const current = roles[roleIndex];
-      if (isDeleting) {
-        charIndex--;
-        roleElement.textContent = current.substring(0, charIndex);
-      } else {
-        charIndex++;
-        roleElement.textContent = current.substring(0, charIndex);
-      }
-
-      const typingSpeed = isDeleting ? 30 : 60;
-
-      if (!isDeleting && charIndex === current.length) {
-        setTimeout(() => isDeleting = true, 800);
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-      }
-
-      setTimeout(typeRole, typingSpeed);
-    }
-
-    typeRole();
-  </script>
 </body>
 </html>
