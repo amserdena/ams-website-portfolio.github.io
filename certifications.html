@@ -186,17 +186,17 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img id="logo" src="/index.html/images/amslogo.png" alt="Logo" />
+      <img id="logo" src="images/amslogo.png" alt="Logo" />
     </div>
     <div class="hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </div>
-    <div class="nav-right">
+    <div class="nav-right" id="navLinks">
       <a href="home.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html">Projects</a>
-      <a href="certifications.html">Certifications</a>
+      <a href="certifications.html" class="active">Certifications</a>
       <a href="competitions.html">Competitions</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -205,7 +205,6 @@
   <main>
     <h1>Certifications & Eligibility</h1>
 
-    <!-- CSC -->
     <div class="certification">
       <div class="cert-text">
         <h2>Civil Service Examination – Professional Level</h2>
@@ -217,7 +216,6 @@
       </div>
     </div>
 
-    <!-- TOPCIT -->
     <div class="certification">
       <div class="cert-text">
         <h2>Test of Practical Competency in ICT (TOPCIT) – Level 2</h2>
@@ -229,7 +227,6 @@
       </div>
     </div>
 
-    <!-- CSIH -->
     <div class="certification">
       <div class="cert-text">
         <h2>Computer Security Incident Handling (CSIH) – NC I</h2>
@@ -241,13 +238,15 @@
       </div>
     </div>
   </main>
- <script>
+
+  <footer>
+    &copy; 2025 Anna Mae Serdeña. All rights reserved.
+  </footer>
+
+  <script>
     function toggleNav() {
       document.getElementById("navLinks").classList.toggle("active");
     }
   </script>
-  <footer>
-    &copy; 2025 Anna Mae Serdeña. All rights reserved.
-  </footer>
 </body>
 </html>
