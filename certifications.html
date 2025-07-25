@@ -28,7 +28,7 @@
 
     nav {
       background-color: var(--black);
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,16 +42,67 @@
       width: auto;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
     .nav-right a {
-      margin-left: 1rem;
+      margin: 0 1rem;
       color: var(--white);
-      text-decoration: none;
       font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .nav-right a:hover {
       color: var(--gray);
+    }
+
+    .nav-right a.active {
+      border-bottom: 2px solid var(--gray);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--white);
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display: none;
+        flex-direction: column;
+        background: var(--black);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-right.active {
+        display: flex;
+      }
+
+      .nav-right a {
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray);
+        width: 100%;
+      }
+
+      .hamburger {
+        display: flex;
+      }
     }
 
     main {
@@ -86,7 +137,6 @@
       width: 100%;
       height: auto;
       border-radius: 8px;
-      border: none;
     }
 
     .cert-text h2 {
@@ -136,7 +186,10 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img src="images/amslogo.png" alt="Logo" />
+      <img id="logo" src="/index.html/images/amslogo.png" alt="Logo" />
+    </div>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
     </div>
     <div class="nav-right">
       <a href="home.html">Home</a>
@@ -188,7 +241,11 @@
       </div>
     </div>
   </main>
-
+ <script>
+    function toggleNav() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
   </footer>
