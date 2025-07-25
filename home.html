@@ -214,7 +214,7 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img src="images/amslogo.png" alt="Logo">
+      <img id="logo" src="images/amslogo.png" alt="Logo">
     </div>
     <div class="hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
@@ -228,6 +228,7 @@
       <a href="competitions.html">Competitions</a>
       <a href="contact.html">Contact</a>
     </div>
+    
   </nav>
 
   <main>
@@ -238,13 +239,16 @@
           <span id="static-text">Hi, I'm</span>
           <span id="animated-role"></span>
         </div>
-        <h1>ANNA MAE V. SERDEÑA</h1>
+        <h1>ANNA MAE</h1>
 
         <a href="ANNAMAE_SERDEÑA_RESUME.pdf" download class="btn">Download Resume</a>
         <a href="mailto:annamaeserdena16@gmail.com" class="btn">Contact</a>
       </div>
+      
     </header>
+    
   </main>
+  
 
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
@@ -255,7 +259,7 @@
       document.getElementById('navLinks').classList.toggle('active');
     }
 
-    const roles = ["Data Analyst", "Web Developer", "Project Manager"];
+    const roles = ["Data Analyst", "Project Manager"];
     const roleElement = document.getElementById("animated-role");
     let roleIndex = 0;
     let charIndex = 0;
