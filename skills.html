@@ -9,7 +9,7 @@
       --black: #000000;
       --white: #ffffff;
       --gray: #c0c0c0;
-      --lightgray: #c0c0c0;
+      --lightgray: #e0e0e0;
     }
 
     * {
@@ -29,7 +29,7 @@
 
     nav {
       background-color: var(--black);
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -43,11 +43,17 @@
       width: auto;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
     .nav-right a {
-      margin-left: 1rem;
+      margin: 0 1rem;
       color: var(--white);
-      text-decoration: none;
       font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
       transition: color 0.3s ease;
     }
 
@@ -55,20 +61,75 @@
       color: var(--gray);
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--white);
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display: none;
+        flex-direction: column;
+        background: var(--black);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-right.active {
+        display: flex;
+      }
+
+      .nav-right a {
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray);
+        width: 100%;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     main {
       flex: 1;
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    h2 {
-      margin-top: 2rem;
+    .skills-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      flex-wrap: nowrap;
+    }
+
+    .technical-skills,
+    .soft-skills {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .technical-skills h2,
+    .soft-skills h2 {
+      margin-bottom: 1rem;
       font-size: 1.5rem;
     }
 
@@ -76,7 +137,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      margin-top: 1rem;
     }
 
     .skill-item {
@@ -95,11 +155,10 @@
       object-fit: contain;
     }
 
-    .soft-skills-box {
+    .soft-skills {
       background-color: var(--lightgray);
-      padding: 1.5rem;
       border-radius: 12px;
-      margin-top: 1rem;
+      padding: 1.5rem;
     }
 
     .soft-skill {
@@ -113,7 +172,7 @@
     }
 
     .bar {
-      background-color: var(--white);
+      background-color: var(--gray);
       border-radius: 10px;
       overflow: hidden;
       height: 20px;
@@ -131,9 +190,14 @@
       text-align: center;
       padding: 1rem 2rem;
       font-size: 0.9rem;
+      margin-top: auto;
     }
 
     @media (max-width: 768px) {
+      .skills-wrapper {
+        flex-direction: column;
+      }
+
       .skill-item {
         flex: 1 1 100%;
       }
@@ -143,7 +207,10 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img id="logo" src="images/amslogo.png" alt="Logo" />
+      <img id="logo" src="/index.html/images/amslogo.png" alt="Logo" />
+    </div>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
     </div>
     <div class="nav-right">
       <a href="home.html">Home</a>
@@ -196,7 +263,11 @@
       <div class="soft-skill"><label>Time Management</label><div class="bar"><div class="bar-fill" style="width: 82%"></div></div></div>
     </div>
   </main>
-
+<script>
+  function toggleNav() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
   </footer>
