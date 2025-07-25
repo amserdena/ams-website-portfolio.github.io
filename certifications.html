@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications | Anna Mae Serdeña</title>
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #c0c0c0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      background-color: var(--white);
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-right a {
+      margin-left: 1rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-right a:hover {
+      color: var(--gray);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .certification {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .cert-text {
+      flex: 1 1 500px;
+    }
+
+    .cert-image {
+      flex: 1 1 280px;
+    }
+
+    .cert-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .cert-text h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-text a {
+      display: inline-block;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .cert-text a:hover {
+      background-color: var(--white);
+      color: var(--black);
+      border: 1px solid var(--black);
+    }
+
+    @media (max-width: 768px) {
+      .certification {
+        flex-direction: column;
+      }
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <img id="logo" src="/index.html/images/amslogo.png" alt="Logo" />
+    </div>
+    <div class="nav-right">
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="competitions.html">Competitions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Certifications & Eligibility</h1>
+
+    <!-- CSC -->
+    <div class="certification">
+      <div class="cert-text">
+        <h2>Civil Service Examination – Professional Level</h2>
+        <p>Passed the national eligibility examination qualifying for government professional positions in the Philippines.</p>
+        <a href="https://www.csc.gov.ph/" target="_blank">Visit CSC Website</a>
+      </div>
+      <div class="cert-image">
+        <img src="images/csc.png" alt="Civil Service Certificate" />
+      </div>
+    </div>
+
+    <!-- TOPCIT -->
+    <div class="certification">
+      <div class="cert-text">
+        <h2>Test of Practical Competency in ICT (TOPCIT) – Level 2</h2>
+        <p>Certified in ICT competency, covering software development, database management, and IT-related problem solving.</p>
+        <a href="https://www.topcit.or.kr/home.do" target="_blank">Visit TOPCIT Korea</a>
+      </div>
+      <div class="cert-image">
+        <img src="images/topcit.png" alt="TOPCIT Certificate" />
+      </div>
+    </div>
+
+    <!-- CSIH -->
+    <div class="certification">
+      <div class="cert-text">
+        <h2>Computer Security Incident Handling (CSIH) – NC I</h2>
+        <p>Certified for entry-level skills in responding to and managing basic computer security incidents.</p>
+        <a href="https://www.tesda.gov.ph/" target="_blank">Visit TESDA Website</a>
+      </div>
+      <div class="cert-image">
+        <img src="images/csih.png" alt="CSIH Certificate" />
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Anna Mae Serdeña. All rights reserved.
+  </footer>
+</body>
+</html>
