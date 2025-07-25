@@ -28,7 +28,7 @@
 
     nav {
       background-color: var(--black);
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,16 +42,63 @@
       width: auto;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
     .nav-right a {
-      margin-left: 1rem;
+      margin: 0 1rem;
       color: var(--white);
-      text-decoration: none;
       font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .nav-right a:hover {
       color: var(--gray);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--white);
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display: none;
+        flex-direction: column;
+        background: var(--black);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-right.active {
+        display: flex;
+      }
+
+      .nav-right a {
+        padding: 1rem;
+        border-bottom: 1px solid var(--gray);
+        width: 100%;
+      }
+
+      .hamburger {
+        display: flex;
+      }
     }
 
     main {
@@ -137,15 +184,18 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img src="images/amslogo.png" alt="Logo" />
+      <img id="logo" src="images/amslogo.png" alt="Logo" />
     </div>
-    <div class="nav-right">
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-right" id="navLinks">
       <a href="home.html">Home</a>
       <a href="about.html">About Me</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html">Projects</a>
       <a href="certifications.html">Certifications</a>
-        <a href="competitions.html">Competitions</a>
+      <a href="competitions.html">Competitions</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -210,7 +260,7 @@
         <a href="https://docs.google.com/spreadsheets/d/1i02z4eCdEmYGCpfWKoXVOTiRAFo7Jq0TmuwOzoftA74/edit?gid=1589814443" target="_blank">View in Google Sheets</a>
       </div>
       <div class="project-image">
-        <img src="images/dataanalyst.png" alt="Data Analyst Job Applications Image" />
+        <img src="/index.html/images/dataanalyst.png" alt="Data Analyst Job Applications Image" />
       </div>
     </div>
   </main>
@@ -218,5 +268,11 @@
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
   </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
