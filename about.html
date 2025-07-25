@@ -29,33 +29,84 @@
 
     nav {
       background-color: var(--black);
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .nav-left img {
       height: 40px;
+      width: auto;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
     }
 
     .nav-right a {
+      margin: 0 1rem;
       color: var(--white);
-      margin-left: 1rem;
-      text-decoration: none;
       font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     .nav-right a:hover {
       color: var(--gray);
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--white);
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-right {
+        display: none;
+        flex-direction: column;
+        background: var(--black);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-right.active {
+        display: flex;
+      }
+
+     .nav-right a {
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray);
+    width: 100%; /* 🔧 makes dividers stretch edge to edge */
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     main {
       flex: 1;
       display: flex;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 6rem 1rem 2rem;
     }
 
     .container {
@@ -91,10 +142,27 @@
       margin-bottom: 1rem;
     }
 
+    .btn {
+      display: inline-block;
+      background-color: var(--black);
+      color: var(--white);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      margin: 0.5rem 0.5rem 0 0;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
     p {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: var(--black); /* changed from var(--gray) to var(--black) */
+      color: var(--black);
     }
 
     footer {
@@ -105,7 +173,6 @@
       font-size: 0.9rem;
     }
 
-    /* Stickers */
     .sticker {
       position: absolute;
       width: 60px;
@@ -191,8 +258,8 @@
 </head>
 <body>
   <nav>
-     <div class="nav-left">
-      <img src="images/amslogo.png" alt="Logo">
+    <div class="nav-left">
+      <img id="logo" src="images/amslogo.png" alt="Logo">
     </div>
     <div class="hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
@@ -211,7 +278,6 @@
   <main>
     <div class="container">
       <div class="photo-wrapper">
-        <!-- Stickers -->
         <div class="sticker sticker1">
           <img src="images/sticker.png" alt="Sticker 1">
         </div>
@@ -242,5 +308,11 @@
   <footer>
     &copy; 2025 Anna Mae Serdeña. All rights reserved.
   </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
