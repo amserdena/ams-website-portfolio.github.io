@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anna Mae Serdeña | Virtual Assistant & Project Manager</title>
+  <title>Anna Mae Serdeña | Data Analyst | Web Developer | Project Manager</title>
   <style>
     :root {
       --white: #ffffff;
       --black: #000000;
-      --gray: #cccccc;
+      --gray: #888888;
+
       --color: var(--black);
       --card-bg: var(--gray);
-      --border-color: var(--gray);
+      --border-color: var(--black);
+      --text-color: var(--black);
     }
 
     * {
@@ -26,7 +28,7 @@
       height: 100%;
       overflow: hidden;
       background-color: var(--white);
-      color: var(--black);
+      color: var(--text-color);
     }
 
     nav {
@@ -52,14 +54,11 @@
       color: var(--white);
       font-weight: 500;
       font-size: 1.1rem;
-      transition: color 0.3s ease, background-color 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     .nav-right a:hover {
       color: var(--black);
-      background-color: var(--white);
-      padding: 0.3rem 0.6rem;
-      border-radius: 5px;
     }
 
     .hamburger {
@@ -95,7 +94,7 @@
 
       .nav-right a {
         padding: 1rem;
-        border-bottom: 1px solid var(--gray);
+        border-bottom: 1px solid var(--white);
       }
 
       .nav-right.active {
@@ -153,7 +152,7 @@
       border-radius: 12px;
       max-width: 90%;
       margin-left: 5%;
-      color: var(--black);
+      color: var(--text-color);
     }
 
     #typing-container {
@@ -171,7 +170,7 @@
     }
 
     #animated-role {
-      border-right: 2px solid var(--black);
+      border-right: 2px solid var(--text-color);
       animation: blink 0.7s steps(1) infinite;
     }
 
@@ -190,26 +189,26 @@
 
     .btn {
       display: inline-block;
-      background-color: var(--white);
+      background-color: var(--black);
       border: 2px solid var(--black);
-      color: var(--black);
+      color: var(--white);
       padding: 0.6rem 1.2rem;
       margin: 0.5rem 0.5rem 0 0;
       border-radius: 25px;
       text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: 0.3s ease, color 0.3s ease;
     }
 
     .btn:hover {
-      background-color: var(--black);
-      color: var(--white);
+      background-color: var(--white);
+      color: var(--black);
     }
 
     .intro p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 0.8rem;
-      color: var(--black);
+      color: var(--text-color);
     }
 
     footer {
@@ -224,24 +223,24 @@
 <body>
   <nav>
     <div class="nav-left">
-      <img id="logo" src="/images/amslogo.png" alt="Logo">
+      <img id="logo" src="images/amslogo.png" alt="Logo">
     </div>
     <div class="hamburger" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </div>
     <div class="nav-right" id="navLinks">
-      <a href="/index.html/home.html">Home</a>
-      <a href="/index.html/about.html">About Me</a>
-      <a href="/index.html/skills.html">Skills</a>
-      <a href="/index.html/projects.html">Projects</a>
-      <a href="/index.html/certifications.html">Certifications</a>
-      <a href="/index.html/competitions.html">Competitions</a>
-      <a href="/index.html/contact.html">Contact</a>
+      <a href="home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="competitions.html">Competitions</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
   <header>
-    <img src="/images/amsss.png" alt="Anna Mae Image Preview" />
+    <img src="images/amsss.png" alt="Anna Mae Image Preview" />
     <div class="intro">
       <div id="typing-container">
         <span id="static-text">Hi, I'm</span>
@@ -250,7 +249,7 @@
       <h1>ANNA MAE V.</h1>
       <h1>SERDEÑA</h1>
 
-      <a href="ANNAMAE_SERDEÑA_RESUME_VA.pdf" download class="btn">Download Resume</a>
+      <a href="ANNAMAE_SERDEÑA_RESUME.pdf" download class="btn">Download Resume</a>
       <a href="mailto:annamaeserdena16@gmail.com" class="btn">Contact</a>
     </div>
   </header>
@@ -260,7 +259,7 @@
       document.getElementById('navLinks').classList.toggle('active');
     }
 
-    const roles = ["Virtual Assistant", "Project Manager"];
+    const roles = ["Data Analyst", "Web Developer", "Project Manager"];
     const roleElement = document.getElementById("animated-role");
     let roleIndex = 0;
     let charIndex = 0;
